@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/iconMain.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Digital India ki Apni Dukan. India's largest Mobile Retail Chain." />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/iconMain.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>O-LINE-O Deal Chahta Hai</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script>
+      var theThing = document.querySelector("#thing");
+      var container = document.querySelector("#contentContainer");
+
+      container.addEventListener("click", function (event) {
+        var xPosition =
+          event.clientX -
+          container.getBoundingClientRect().left -
+          theThing.clientWidth / 2;
+        var yPosition =
+          event.clientY -
+          container.getBoundingClientRect().top -
+          theThing.clientHeight / 2;
+        theThing.style.left = xPosition + "px";
+        theThing.style.top = yPosition + "px";
+      });
+    </script>
+  </body>
+</html>
